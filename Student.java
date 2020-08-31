@@ -8,7 +8,7 @@ public class Student {
 	private String lastName;
 	private int gradeYear;
 	private String studentID;
-	private String courses;
+	private String courses = null;
 	private int tuitionBalance;
 	
 	private static int costOfCourse = 600;
@@ -57,22 +57,44 @@ public class Student {
 		 
 		 // Get inside a loop, user 0 to quit
 		 
-		 System.out.println("Enter course to enroll (press 0 to exit): ");
 		 
-		 Scanner in = new Scanner(System.in);
-		 String course = in.nextLine();
-		 if (course != "Q") {
-			courses = courses + "\n" + course;
-			tuitionBalance = tuitionBalance + costOfCourse;
-		}
 		 
-		 System.out.println("ENROLLED IN: " + courses);
-		 System.out.println("TUITION BALANCE: " + tuitionBalance);
+		 do {
+			 
+			System.out.print("Enter course to enroll (press Q to exit): ");
+			 
+			 Scanner in = new Scanner(System.in);
+			 String course = in.nextLine();
+			 if (!course.equals("Q")) {
+				courses = courses + "\n" + course;
+				tuitionBalance = tuitionBalance + costOfCourse;
+			 }
+		 
+			 else { 
+				 System.out.println("BREAK");
+				 
+				 break; }
+		 
+		} while (1 != 0);
+		 
+	System.out.println("ENROLLED IN: " + courses);
+	System.out.println("TUITION BALANCE: " + tuitionBalance);
 		 
 	 }
 	
 	
-	// View balances and pay tuition
+	// View balances and 
+	 
+	 public void viewBalance() {
+		 
+		 System.out.println("YOUR BALANCE IS: " + tuitionBalance);
+	 }
+	 
+	 
+	 
+	// Pay tuition
+	 
+	
 	
 	
 	// Show status of the students with...
