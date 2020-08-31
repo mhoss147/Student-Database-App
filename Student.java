@@ -23,13 +23,13 @@ public class Student {
 	public Student() {
 		
 		Scanner in = new Scanner(System.in);
-		System.out.println("Enter student first name: ");
+		System.out.print("Enter student first name: ");
 		this.firstName = in.nextLine();
 		
-		System.out.println("Enter student last name: ");
+		System.out.print("Enter student last name: ");
 		this.lastName = in.nextLine();
 		
-		System.out.println("1 - Freeshman\n2 - Sophmore\3 - Junior\n4 - Senior\nEnter class year: ");
+		System.out.println("1 - Freeshman\n2 - Sophmore\n3 - Junior\n4 - Senior\nEnter class year: ");
 		this.gradeYear = in.nextInt();
 		
 		setStudentID();
@@ -52,6 +52,24 @@ public class Student {
 	
 	
 	// Enroll in courses
+	
+	 public void enroll() {
+		 
+		 // Get inside a loop, user 0 to quit
+		 
+		 System.out.println("Enter course to enroll (press 0 to exit): ");
+		 
+		 Scanner in = new Scanner(System.in);
+		 String course = in.nextLine();
+		 if (course != "Q") {
+			courses = courses + "\n" + course;
+			tuitionBalance = tuitionBalance + costOfCourse;
+		}
+		 
+		 System.out.println("ENROLLED IN: " + courses);
+		 System.out.println("TUITION BALANCE: " + tuitionBalance);
+		 
+	 }
 	
 	
 	// View balances and pay tuition
