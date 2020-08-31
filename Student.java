@@ -71,14 +71,11 @@ public class Student {
 			 }
 		 
 			 else { 
-				 System.out.println("BREAK");
-				 
 				 break; }
 		 
 		} while (1 != 0);
 		 
 	System.out.println("ENROLLED IN: " + courses);
-	System.out.println("TUITION BALANCE: " + tuitionBalance);
 		 
 	 }
 	
@@ -87,14 +84,26 @@ public class Student {
 	 
 	 public void viewBalance() {
 		 
-		 System.out.println("YOUR BALANCE IS: " + tuitionBalance);
+		 System.out.println("YOUR BALANCE IS: $" + tuitionBalance);
 	 }
 	 
 	 
 	 
 	// Pay tuition
 	 
-	
+	 public void payTuition() {
+		 
+		 System.out.print("Enter your payment: $");
+		 Scanner in = new Scanner(System.in);
+		 int payment = in.nextInt();
+		         
+		 tuitionBalance = tuitionBalance - payment;		
+		 
+		 System.out.println("Thank you for your payment of $: " + payment);
+		 
+		 viewBalance();
+	}
+	 
 	
 	
 	// Show status of the students with...

@@ -6,6 +6,9 @@ public class StudentDatabaseApp {
 		Student student1 = new Student();
 		
 		student1.enroll();
+		
+		student1.payTuition();
+		
 
 		// Ask how many New users we want to add
 		
