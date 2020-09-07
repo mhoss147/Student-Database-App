@@ -8,7 +8,7 @@ public class Student {
 	private String lastName;
 	private int gradeYear;
 	private String studentID;
-	private String courses = null;
+	private String courses = "";
 	private int tuitionBalance;
 	
 	private static int costOfCourse = 600;
@@ -33,7 +33,7 @@ public class Student {
 		this.gradeYear = in.nextInt();
 		
 		setStudentID();
-		System.out.println(firstName + " " + lastName + " " + gradeYear + " " + studentID);
+	//	System.out.println(firstName + " " + lastName + " " + gradeYear + " " + studentID);
 			
 	}
 	
@@ -44,10 +44,7 @@ public class Student {
 		id++;
 		
 		// Grade level + ID
-		
 		this.studentID = gradeYear + "" + id;
-		
-		
 	}
 	
 	
@@ -55,9 +52,7 @@ public class Student {
 	
 	 public void enroll() {
 		 
-		 // Get inside a loop, user 0 to quit
-		 
-		 
+		 // Get inside a loop, user 0 to quit		 
 		 
 		 do {
 			 
@@ -66,16 +61,15 @@ public class Student {
 			 Scanner in = new Scanner(System.in);
 			 String course = in.nextLine();
 			 if (!course.equals("Q")) {
-				courses = courses + "\n" + course;
+				courses = courses + "\n  " + course;
 				tuitionBalance = tuitionBalance + costOfCourse;
 			 }
 		 
 			 else { 
 				 break; }
-		 
 		} while (1 != 0);
 		 
-	System.out.println("ENROLLED IN: " + courses);
+//	System.out.println("ENROLLED IN: " + courses);
 		 
 	 }
 	
@@ -109,6 +103,8 @@ public class Student {
 	// Show status of the students with...
 	 public String showInfo() {
 		 return "Name: " + firstName + " " + lastName +
+				 "\nGrade Level: " + gradeYear + 
+				 "\nStudent ID: " + studentID +
 				 "\nCourses Enrolled: " + courses + 
 				 "\nBalance: $" + tuitionBalance;
 	 }

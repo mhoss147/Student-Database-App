@@ -8,8 +8,9 @@ public class StudentDatabaseApp {
 		student1.enroll();
 		
 		student1.payTuition();
-		
+		System.out.println(student1.showInfo());		
 
+		
 		// Ask how many New users we want to add
 		
 		
