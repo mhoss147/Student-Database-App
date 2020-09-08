@@ -101,7 +101,7 @@ public class Student {
 	
 	
 	// Show status of the students with...
-	 public String showInfo() {
+	 public String toString() {
 		 return "Name: " + firstName + " " + lastName +
 				 "\nGrade Level: " + gradeYear + 
 				 "\nStudent ID: " + studentID +
